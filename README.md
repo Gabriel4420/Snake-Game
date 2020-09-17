@@ -70,35 +70,11 @@ Para copiar o projeto, utilize os comandos:
 
 ```bash
   # Clonar o repositório
-  ❯ git clone https://github.com/jerp86/gobarber-web.git
+  ❯ git clone https://github.com/Gabriel4420/Snake-Game
 
   # Entrar no diretório
   ❯ abra no browser o arquivo html
 ```
-Para instalar as dependências e iniciar o projeto, você pode utilizar o Yarn ou NPM:
-
-**Utilizando yarn**
-
-```bash
-  # Instalar as dependências
-  ❯ yarn
-
-  # Iniciar o projeto
-  ❯ yarn dev:server
-```
-
-**Utilizando npm**
-
-*PS: Caso utilize o NPM, apaque o arquivo `yarn.lock` para ter todas as dependências instaladas da melhor forma.*
-
-```bash
-  # Instalar as dependências
-  ❯ npm install
-
-  # Iniciar o projeto
-  ❯ npm dev:server
-```
-
 ---
 
 <h4 align="center">
