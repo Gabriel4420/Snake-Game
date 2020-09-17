@@ -63,6 +63,7 @@ function CustomAlert(){
 this.ok = function(){
   document.getElementById('dialogbox').style.display = "none";
   document.getElementById('dialogoverlay').style.display = "none";
+  window.location.reload();
 }
 }
 var Alert = new CustomAlert();
@@ -75,11 +76,14 @@ function initialGame(){
   if(snake[0].x < 0 * box && direction == "left") snake[0].x = 16 * box;
   if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
   if(snake[0].y < 0 * box && direction == "up") snake[0].y = 16 * box;
-
+  let count = 0 ;
   for(i = 1; i < snake.length; i++){
     if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
       clearInterval(game);
-      Alert.render('&#x1F622; você perdeu');
+      if(posX == food.x || posy == food.y){
+        count++;
+      }
+      Alert.render(`&#x1F622; você perdeu e fez ${count} pontos`);
     }
   }
 
@@ -87,8 +91,8 @@ function initialGame(){
   snakeObject();
   drawFood();
 
-  let posX = snake[0].x;
-  let posy = snake[0].y;
+  var posX = snake[0].x;
+  var posy = snake[0].y;
 
   
     
@@ -96,13 +100,14 @@ function initialGame(){
   if( direction == "down") posy += box ;
   if( direction == "right")posX += box;
   if( direction == "left") posX -= box;
-
+  
   if(posX != food.x || posy != food.y){
     snake.pop();
   } 
   else {
     food.x = Math.floor(Math.random() * 15 + 1) * box;
     food.y = Math.floor(Math.random() * 15 + 1) * box;
+    
   }
 
   
