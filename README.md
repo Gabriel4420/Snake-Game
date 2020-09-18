@@ -1,5 +1,5 @@
 <h1 align="center">
-  🐍 Snake Game 
+  🐍 Snake Game 🐍
 </h1>
 
 <p align="center">
